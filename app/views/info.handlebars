@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="panel panel-default">
+        <div class="panel-heading">Info</div>
+        <div class="panel-body">
+          <ul>
+            <li>APP Name: {{this.name}}</li>
+            <li>Version: {{this.version}}</li>
+            <li>Description: {{this.description}}</li>
+            <li>
+              Routes:
+              <ul>
+                {{#each routes}}
+                  <li>URL: {{this.url}}</li>
+                {{/each}}
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

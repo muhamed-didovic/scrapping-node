@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="panel panel-default">
+        <div class="panel-heading">HEALTH CHECK STATUS</div>
+        <div class="panel-body">
+          {{#each results}}
+            <li>{{@key}} - {{this.results.health}}</li>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

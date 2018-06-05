@@ -1,0 +1,45 @@
+{
+  "apps": [
+    {
+      "name": "server",
+      "script": "app.js",
+      "watch": true,
+      "ignore_watch": [
+        "[\\/\\\\]\\./",
+        "\.git",
+        "node_modules",
+        "report.xlsx",
+        "/[\/\\]\."
+      ],
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "instances": 0,
+      "max_memory_restart": "16G",
+      "max_restarts": 10,
+      "exec_interpreter"   : "node",
+      "exec_mode"          : "cluster_mode",
+      "log_date_format"    : "YYYY-MM-DD HH:mm Z"
+    },
+    {
+      "name": "cronjob",
+      "script": "cronjob.js",
+      "watch": true,
+      "ignore_watch": [
+        "[\\/\\\\]\\./",
+        "\.git",
+        "node_modules",
+        "report.xlsx",
+        "/[\/\\]\."
+      ],
+      "env": {
+        "NODE_ENV": "development"
+      },
+
+      "max_memory_restart": "16G",
+      "max_restarts": 10,
+      "exec_interpreter"   : "node",
+      "log_date_format"    : "YYYY-MM-DD HH:mm Z"
+    }
+  ]
+}

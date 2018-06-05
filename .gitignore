@@ -1,0 +1,12 @@
+node_modules/
+public/components
+.sass-cache
+.idea
+coverage
+.DS_Store
+Thumbs.db
+npm-debug.log
+/test/report.xlsx
+report.xlsx
+yarn-error.log
+/errorShots
