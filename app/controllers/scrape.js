@@ -37,6 +37,10 @@ router.get('/', (req, res, next) => {
     })
     .catch(err => {
       console.error(moment().format(), 'get scrape Error:', err);
-      return next(err);
+      //return next(err);
+      return res.render('scrape', {
+        title: 'WATER',
+        devices: 0
+      });
     });
 });

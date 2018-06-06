@@ -50,9 +50,14 @@ module.exports = url => {
         console.error(moment().format(), 'x-ray Error:', err);
         return reject(err);
       }
-      console.log(moment().format(), 'Successfully scraped from:', url);
+
+      //check if we can reach the page
+      if ( _.some(data, { name: 'Authorization Required' })){
+        return reject('Can scrape from URL, Authorization is Required');
+      }
+
+      console.log(moment().format(), 'Successfully scraped from:', url, 'Data:', data);
       let obj = {};
-      // console.log('11', data);
 
       // if we don't find anything
       if (_.isEmpty(data)) {
