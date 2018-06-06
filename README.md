@@ -26,7 +26,7 @@ $ npm test
 ## PM2 package
 Info: https://github.com/Unitech/pm2, http://pm2.keymetrics.io/
 
-Package pm2 is installed on uardev or staging environment.
+Ensure that package pm2 is installed on your environment.
 
 Important file is ecosystem.json, which holds configuration for app:
 1. watcher for files, whenever there is change within a file restart server
@@ -36,7 +36,7 @@ Important file is ecosystem.json, which holds configuration for app:
 
 In order to check state of the app or start the app use this steps:
    ```sh
-$ cd /data/www/waterplantscrapping.uardev.com/
+$ cd /your-folder/
 $ pm2 list (check if there is anything running, if not go to 3. step)
 $ pm2 start ecosystem.json (start server and cronjob)
 ```
